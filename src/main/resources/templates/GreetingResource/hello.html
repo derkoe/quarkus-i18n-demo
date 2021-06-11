@@ -34,6 +34,7 @@
 
     <h2>String With ICU Message Format</h2>
     <p>ICU message format is the standard way for translating complex messages (also not performant).</p>
+    <p><strong>icu4j ist not compatible with native</strong></p>
     <p>Code: <code>\{icumf:format(i18n:['hello.with-icu-format'], name, age)\}</code>)</p>
     <p>Result: {icumf:format(i18n:['hello.with-icu-format'], name, age)}</p>
     <p>Result: {icumf:format(i18n:['hello.with-icu-format'], 'Qute', 1)}</p>
@@ -41,11 +42,13 @@
     <h2>Type-safe Message Bundles</h2>
     <p>Quarkus gives you a type-safe way to access messages which is really nice. But there are some problems:
     <ul>
-        <li>there is no possibility for message format</li>
+        <li>there is no possibility for message format (you can use Qute template syntax as an alternative)</li>
         <li>because the default message is in the Java code translation tools cannot use them</li>
         <li>you cannot have dots in the message key</li>
     </ul>
     <p>Code: <code>\{msg:hello_name(name)\}</code>)</p>
     <p>Result: {msg:hello_name(name)}</p>
+    <p>Code: <code>\{msg:hello_name_age(name, age)\}</code></p>
+    <p>Result: {msg:hello_name_age(name, age)}</p>
 </body>
 </html>
