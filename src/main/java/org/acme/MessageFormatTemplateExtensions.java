@@ -7,7 +7,7 @@ import java.text.MessageFormat;
 @TemplateExtension(namespace = "mf")
 public class MessageFormatTemplateExtensions {
 
-    static String format(String pattern, String... params) {
-        return MessageFormat.format(pattern, (Object[]) params);
+    static String format(String pattern, Object... params) {
+        return MessageFormat.format(pattern, params);
     }
 }

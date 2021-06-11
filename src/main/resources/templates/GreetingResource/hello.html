@@ -34,10 +34,7 @@
     <p>ICU message format is the standard way for translating complex messages</p>
     <p>Code: <code>\{icumf:format(i18n:['hello.with-icu-format'], name, age)\}</code>)</p>
     <p>Result: {icumf:format(i18n:['hello.with-icu-format'], name, age)}</p>
-    <p><strong>This is currently not working!</strong> because there seems to be a bug with passing multiple parameters
-        to a <code>TemplateExtension</code>. This simpler version works:</p>
-    <p>Code: <code>\{icumf:format(i18n:['hello.with-format'], name)\}</code>)</p>
-    <p>Result: {icumf:format(i18n:['hello.with-format'], name)}</p>
+    <p>Result: {icumf:format(i18n:['hello.with-icu-format'], 'Qute', 1)}</p>
 
     <h2>Type-safe Message Bundles</h2>
     <p>Quarkus gives you a type-safe way to access messages which is really nice. But there are some problems:
