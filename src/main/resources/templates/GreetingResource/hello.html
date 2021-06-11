@@ -22,16 +22,18 @@
     <p>Result: {i18n:['hello.simple']}</p>
 
     <h2>String With Java Format</h2>
+    <p>You can combine multiple namespaces to use the <code>str:format</code> in combination with the <code>i18n</code>
+        namespace</p>
     <p>Code: <code>\{str:format(i18n:hello-str, name)\}</code>)</p>
     <p>Result: {str:format(i18n:hello-str, name)}</p>
 
     <h2>String With Message Format</h2>
-    <p>You can combine multiple namespaces to use formatting with resource bundle messages</p>
+    <p>You also create a namespace for the Java message format (not very performant because no caching is done).</p>
     <p>Code: <code>\{mf:format(i18n:['hello.with-format'], name)\}</code>)</p>
     <p>Result: {mf:format(i18n:['hello.with-format'], name)}</p>
 
     <h2>String With ICU Message Format</h2>
-    <p>ICU message format is the standard way for translating complex messages</p>
+    <p>ICU message format is the standard way for translating complex messages (also not performant).</p>
     <p>Code: <code>\{icumf:format(i18n:['hello.with-icu-format'], name, age)\}</code>)</p>
     <p>Result: {icumf:format(i18n:['hello.with-icu-format'], name, age)}</p>
     <p>Result: {icumf:format(i18n:['hello.with-icu-format'], 'Qute', 1)}</p>
