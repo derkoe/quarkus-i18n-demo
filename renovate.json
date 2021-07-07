@@ -1,5 +1,14 @@
 {
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "^io.quarkus"
+      ],
+      "groupName": "Quarkus",
+      "groupSlug": "quarkus"
+    }
   ]
 }
